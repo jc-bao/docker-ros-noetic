@@ -1,0 +1,6 @@
+FROM nvidia-noetic:latest
+
+RUN rosdep update && apt update
+RUN apt-get install -y --no-install-recommends ros-noetic-catkin python3-catkin-tools python3-osrf-pycommon python3-wstool g++
+RUN echo 'source /ws_moveit/devel/setup.zsh' >> ~/.zshrc
+
